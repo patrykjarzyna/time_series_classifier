@@ -5,6 +5,8 @@
 class Evaluator
 {
     public:
+        void y_true;
+        void y_predicted;
         /** Default constructor */
         Evaluator();
         /** Default destructor */
@@ -13,6 +15,8 @@ class Evaluator
     protected:
 
     private:
+        float get_precission();
+        float get_recall();
 };
 
 #endif // EVALUATOR_H

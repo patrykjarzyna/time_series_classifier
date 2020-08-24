@@ -10,8 +10,6 @@ class Predict
         /** Default destructor */
         virtual ~Predict();
 
-    protected:
-
     private:
 };
 

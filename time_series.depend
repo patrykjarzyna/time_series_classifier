@@ -1,0 +1,20 @@
+# depslib dependency file v1.0
+1598304320 source:/home/patryk/Desktop/time_series_uni/time_series/main.cpp
+	<iostream>
+
+1598304443 source:/home/patryk/Desktop/time_series_uni/time_series/src/DataPreparator.cpp
+	"DataPreparator.h"
+
+1598304443 /home/patryk/Desktop/time_series_uni/time_series/include/DataPreparator.h
+	<DataReader.h>
+
+1598304391 /home/patryk/Desktop/time_series_uni/time_series/include/DataReader.h
+
+1598304391 source:/home/patryk/Desktop/time_series_uni/time_series/src/DataReader.cpp
+	"DataReader.h"
+
+1598304535 source:/home/patryk/Desktop/time_series_uni/time_series/src/Evaluator.cpp
+	"Evaluator.h"
+
+1598304535 /home/patryk/Desktop/time_series_uni/time_series/include/Evaluator.h
+
