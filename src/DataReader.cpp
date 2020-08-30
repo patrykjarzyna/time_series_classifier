@@ -51,5 +51,3 @@ std::ifstream DataReader::get_file(std::string filepath)
 
     return file;
 }
-
-
