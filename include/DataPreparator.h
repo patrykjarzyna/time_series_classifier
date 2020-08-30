@@ -4,15 +4,17 @@
 #include <DataReader.h>
 
 
-class DataPreparator : public DataReader
+class DataPreparator
 {
     public:
+        int data;
+        int prepare_data();
         DataPreparator();
         virtual ~DataPreparator();
 
-    protected:
-
     private:
+        void remove_outliers();
+        void pad_data();
 };
 
 #endif // DATAPREPARATOR_H

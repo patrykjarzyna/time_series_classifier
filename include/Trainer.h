@@ -5,6 +5,7 @@
 class Trainer
 {
     public:
+        int data_path;
         /** Default constructor */
         Trainer();
         /** Default destructor */

@@ -5,18 +5,17 @@
 class Evaluator
 {
     public:
-        void y_true;
-        void y_predicted;
+        int y_true;
+        int y_predicted;
         /** Default constructor */
         Evaluator();
         /** Default destructor */
         virtual ~Evaluator();
 
-    protected:
-
     private:
         float get_precission();
         float get_recall();
+        float get_accuracy();
 };
 
 #endif // EVALUATOR_H

@@ -5,6 +5,8 @@
 class Predict
 {
     public:
+        int predictions;
+        int save_to_file();
         /** Default constructor */
         Predict();
         /** Default destructor */

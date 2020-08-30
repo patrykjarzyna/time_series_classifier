@@ -32,7 +32,21 @@
 			<Add option="-Wall" />
 			<Add option="-fexceptions" />
 		</Compiler>
+		<Unit filename="include/DataPreparator.h" />
+		<Unit filename="include/DataReader.h" />
+		<Unit filename="include/DataReaderPredict.h" />
+		<Unit filename="include/Evaluator.h" />
+		<Unit filename="include/Model.h" />
+		<Unit filename="include/Predict.h" />
+		<Unit filename="include/Trainer.h" />
 		<Unit filename="main.cpp" />
+		<Unit filename="src/DataPreparator.cpp" />
+		<Unit filename="src/DataReader.cpp" />
+		<Unit filename="src/DataReaderPredict.cpp" />
+		<Unit filename="src/Evaluator.cpp" />
+		<Unit filename="src/Model.cpp" />
+		<Unit filename="src/Predict.cpp" />
+		<Unit filename="src/Trainer.cpp" />
 		<Extensions>
 			<code_completion />
 			<debugger />

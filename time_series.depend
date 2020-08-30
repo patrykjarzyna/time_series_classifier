@@ -1,6 +1,13 @@
 # depslib dependency file v1.0
-1598304320 source:/home/patryk/Desktop/time_series_uni/time_series/main.cpp
+1598781490 source:/home/patryk/Desktop/time_series_uni/time_series/main.cpp
+	<string>
+	<fstream>
+	<vector>
+	<utility>
+	<stdexcept>
+	<sstream>
 	<iostream>
+	"DataReader.h"
 
 1598304443 source:/home/patryk/Desktop/time_series_uni/time_series/src/DataPreparator.cpp
 	"DataPreparator.h"
@@ -10,11 +17,26 @@
 
 1598304391 /home/patryk/Desktop/time_series_uni/time_series/include/DataReader.h
 
-1598304391 source:/home/patryk/Desktop/time_series_uni/time_series/src/DataReader.cpp
+1598783316 source:/home/patryk/Desktop/time_series_uni/time_series/src/DataReader.cpp
 	"DataReader.h"
 
 1598304535 source:/home/patryk/Desktop/time_series_uni/time_series/src/Evaluator.cpp
 	"Evaluator.h"
 
 1598304535 /home/patryk/Desktop/time_series_uni/time_series/include/Evaluator.h
+
+1598304470 source:/home/patryk/Desktop/time_series_uni/time_series/src/Model.cpp
+	"Model.h"
+
+1598304620 source:/home/patryk/Desktop/time_series_uni/time_series/src/Predict.cpp
+	"Predict.h"
+
+1598304503 source:/home/patryk/Desktop/time_series_uni/time_series/src/Trainer.cpp
+	"Trainer.h"
+
+1598779645 /home/patryk/Desktop/time_series_uni/time_series/src/DataReader.cpp
+	"DataReader.h"
+
+1598738882 source:/home/patryk/Desktop/time_series_uni/time_series/src/DataReaderPredict.cpp
+	"DataReaderPredict.h"
 
