@@ -4,15 +4,12 @@
 #include <DataReader.h>
 
 
-class DataReaderPredict //: public DataReader
+class DataReaderPredict : public DataReader
 {
     public:
-        DataReaderPredict();
-        virtual ~DataReaderPredict();
+        DataReaderPredict(char delimeter_, int data_cols_);
 
-    protected:
-
-    private:
+        std::vector<std::pair<std::vector<float>, int>> read_file(std::string filepath);
 };
 
 #endif // DATAREADERPREDICT_H
