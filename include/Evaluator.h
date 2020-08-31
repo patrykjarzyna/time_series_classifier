@@ -7,15 +7,10 @@ class Evaluator
     public:
         int y_true;
         int y_predicted;
-        /** Default constructor */
         Evaluator();
-        /** Default destructor */
-        virtual ~Evaluator();
 
     private:
-        float get_precission();
-        float get_recall();
-        float get_accuracy();
+        float evaluate();
 };
 
 #endif // EVALUATOR_H

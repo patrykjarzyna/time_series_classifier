@@ -1,20 +1,19 @@
+#include "tensorflow/cc/client/client_session.h"
+#include "tensorflow/cc/ops/standard_ops.h"
+#include "tensorflow/core/framework/tensor.h"
+#include "tensorflow/cc/framework/gradients.h"
 #ifndef DATAPREPARATOR_H
 #define DATAPREPARATOR_H
 
 #include <DataReader.h>
 
 
-class DataPreparator
+class DataPreparator: public DataReader
 {
     public:
-        int data;
-        int prepare_data();
-        DataPreparator();
-        virtual ~DataPreparator();
+        void prepare_data(std::string filepath);
+        DataPreparator(char delimeter_, int data_cols_);
 
-    private:
-        void remove_outliers();
-        void pad_data();
 };
 
 #endif // DATAPREPARATOR_H

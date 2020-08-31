@@ -4,8 +4,3 @@ Trainer::Trainer()
 {
     //ctor
 }
-
-Trainer::~Trainer()
-{
-    //dtor
-}

@@ -6,34 +6,25 @@ DataReader::DataReader(char delimeter_, int data_cols_)
     data_cols = data_cols_;
 }
 
-std::vector<std::pair<std::vector<float>, int>> DataReader::read_file(std::string filepath)
+std::vector<std::vector<float>> DataReader::read_file(std::string filepath)
 {
 
     std::ifstream file = this->get_file(filepath);
     std::string line;
-    std::vector<std::pair<std::vector<float>, int>> result;
+    std::vector<std::vector<float>> result;
 
     int rowIdx = 0;
     while(std::getline(file, line))
     {
         std::stringstream ss(line);
         float val;
-        int colIdx = 0;
 
-        result.push_back({std::vector<float> {}, 0.0});
+        result.push_back(std::vector<float> {});
 
         while(ss >> val)
         {
-            if (colIdx == this->data_cols)
-                // Ostatnia kolumna zawiera etykiete
-                result.at(rowIdx).second = val;
-
-            else
-
-                result.at(rowIdx).first.push_back(val);
+            result.at(rowIdx).push_back(val);
             if(ss.peek() == ',') ss.ignore();
-            colIdx++;
-
         }
         rowIdx++;
     }

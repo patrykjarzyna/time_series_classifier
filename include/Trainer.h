@@ -5,15 +5,11 @@
 class Trainer
 {
     public:
-        int data_path;
-        /** Default constructor */
+        //std::string data_path;
+        //std::string model_path;
         Trainer();
-        /** Default destructor */
-        virtual ~Trainer();
-
-    protected:
-
     private:
+        //void train_model;
 };
 
 #endif // TRAINER_H

@@ -5,14 +5,11 @@
 class Predict
 {
     public:
-        int predictions;
-        int save_to_file();
-        /** Default constructor */
+        void get_predictions();
         Predict();
-        /** Default destructor */
-        virtual ~Predict();
 
     private:
+        int predictions;
 };
 
 #endif // PREDICT_H

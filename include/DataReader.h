@@ -14,10 +14,10 @@ class DataReader
     public:
         DataReader(char delimeter_, int data_cols_);
 
-        std::vector<std::pair<std::vector<float>, int>> read_file(std::string filepath);
+        std::vector<std::vector<float>> read_file(std::string filepath);
 
-    private:
-        std::string delimeter;
+    //private:
+        char delimeter;
         int data_cols;
 
 

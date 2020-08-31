@@ -4,8 +4,3 @@ Evaluator::Evaluator()
 {
     //ctor
 }
-
-Evaluator::~Evaluator()
-{
-    //dtor
-}
