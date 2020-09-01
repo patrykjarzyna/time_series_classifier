@@ -5,10 +5,10 @@
 class Evaluator
 {
     public:
-        int y_true;
-        int y_predicted;
+        int y_true[3];
+        int y_predicted[3];
         Evaluator();
-        void evaluate()
+        void evaluate();
 
     private:
         float get_accuracy();

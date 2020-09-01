@@ -35,6 +35,9 @@ Model::Model(int input_size, int layer1_size, int layer2_size, int output_size)
     apply_b2 = ApplyGradientDescent(scope, b2, Cast(scope, 0.01,  DT_FLOAT), {grad_outputs[4]});
     apply_b3 = ApplyGradientDescent(scope, b3, Cast(scope, 0.01,  DT_FLOAT), {grad_outputs[5]});
 
+    model_session = new ClientSession(scope);
+    TF_CHECK_OK(model_session->Run({assign_w1, assign_w2, assign_w3, assign_b1, assign_b2, assign_b3}, nullptr));
+
 }
 
 void Model::assign_weights(int input_size, int layer1_size, int layer2_size, int output_size)
@@ -63,32 +66,20 @@ void Model::assign_biases(int input_size, int layer1_size, int layer2_size, int 
 
 void Model::fit(Tensor x_data, Tensor y_data)
 {
-
-    ClientSession model_session(scope);
-    TF_CHECK_OK(model_session.Run({assign_w1, assign_w2, assign_w3, assign_b1, assign_b2, assign_b3}, nullptr));
-
     for (int i = 0; i < 5000; ++i) {
     if (i % 100 == 0) {
-        TF_CHECK_OK(model_session.Run({{x, x_data}, {y, y_data}}, {loss}, &outputs));
+        TF_CHECK_OK(model_session->Run({{x, x_data}, {y, y_data}}, {loss}, &outputs));
         std::cout << "Loss after " << i << " steps " << outputs[0].scalar<float>() << std::endl;
     }
-    TF_CHECK_OK(model_session.Run({{x, x_data}, {y, y_data}}, {apply_w1, apply_w2, apply_w3, apply_b1, apply_b2, apply_b3}, nullptr));
+    TF_CHECK_OK(model_session->Run({{x, x_data}, {y, y_data}}, {apply_w1, apply_w2, apply_w3, apply_b1, apply_b2, apply_b3}, nullptr));
     }
 
 }
 
 void Model::predict(Tensor x_data)
 {
-    ClientSession model_session(scope);
-    TF_CHECK_OK(model_session.Run({assign_w1, assign_w2, assign_w3, assign_b1, assign_b2, assign_b3}, nullptr));
-    TF_CHECK_OK(model_session.Run({{x, {x_data}}}, {layer_3}, &outputs));
+    TF_CHECK_OK(model_session->Run({{x, {x_data}}}, {layer_3}, &outputs));
     std::cout << "DNN output: " << *outputs[0].scalar<float>().data() << std::endl;
     //std::cout << "Price predicted " << data_set.output(*outputs[0].scalar<float>().data()) << " euros" << std::endl;
 }
 
-void Model::saveModel()
-{
-    std::cout << 1;
-    //GraphDef graph_def;
-    //TF_ASSERT_OK(scope.ToGraphDef(&graph_def));
-}

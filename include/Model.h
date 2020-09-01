@@ -12,7 +12,6 @@ class Model
     public:
         void fit(Tensor x_data, Tensor y_data);
         void predict(Tensor x_data);
-        void saveModel();
 
         Model(int input_size, int layer1_size, int layer2_size, int output_size);
 
@@ -22,7 +21,7 @@ class Model
         void assign_biases(int input_size, int layer1_size, int layer2_size, int output_size);
 
         Scope scope = Scope::NewRootScope();
-
+        ClientSession* model_session;
 
         tensorflow::Output x, y;
         tensorflow::Output w1, w2, w3;

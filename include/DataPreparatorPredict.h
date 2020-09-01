@@ -3,12 +3,13 @@
 
 #include <DataPreparator.h>
 
+using namespace tensorflow;
 
 class DataPreparatorPredict //: public DataPreparator
 {
     public:
         DataPreparatorPredict();
-        virtual ~DataPreparatorPredict();
+        Tensor prepare_data(std::string filepath);
 
     protected:
 
