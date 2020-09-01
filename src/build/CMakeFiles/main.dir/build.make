@@ -122,9 +122,22 @@ CMakeFiles/main.dir/Evaluator.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/main.dir/Evaluator.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /tmp/time_series/src/Evaluator.cpp -o CMakeFiles/main.dir/Evaluator.s
 
+CMakeFiles/main.dir/ExperimentRunner.o: CMakeFiles/main.dir/flags.make
+CMakeFiles/main.dir/ExperimentRunner.o: ../ExperimentRunner.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/tmp/time_series/src/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/main.dir/ExperimentRunner.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/main.dir/ExperimentRunner.o -c /tmp/time_series/src/ExperimentRunner.cpp
+
+CMakeFiles/main.dir/ExperimentRunner.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/main.dir/ExperimentRunner.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /tmp/time_series/src/ExperimentRunner.cpp > CMakeFiles/main.dir/ExperimentRunner.i
+
+CMakeFiles/main.dir/ExperimentRunner.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/main.dir/ExperimentRunner.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /tmp/time_series/src/ExperimentRunner.cpp -o CMakeFiles/main.dir/ExperimentRunner.s
+
 CMakeFiles/main.dir/Model.o: CMakeFiles/main.dir/flags.make
 CMakeFiles/main.dir/Model.o: ../Model.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/tmp/time_series/src/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/main.dir/Model.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/tmp/time_series/src/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/main.dir/Model.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/main.dir/Model.o -c /tmp/time_series/src/Model.cpp
 
 CMakeFiles/main.dir/Model.i: cmake_force
@@ -137,7 +150,7 @@ CMakeFiles/main.dir/Model.s: cmake_force
 
 CMakeFiles/main.dir/Predict.o: CMakeFiles/main.dir/flags.make
 CMakeFiles/main.dir/Predict.o: ../Predict.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/tmp/time_series/src/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/main.dir/Predict.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/tmp/time_series/src/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/main.dir/Predict.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/main.dir/Predict.o -c /tmp/time_series/src/Predict.cpp
 
 CMakeFiles/main.dir/Predict.i: cmake_force
@@ -150,7 +163,7 @@ CMakeFiles/main.dir/Predict.s: cmake_force
 
 CMakeFiles/main.dir/Trainer.o: CMakeFiles/main.dir/flags.make
 CMakeFiles/main.dir/Trainer.o: ../Trainer.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/tmp/time_series/src/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/main.dir/Trainer.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/tmp/time_series/src/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/main.dir/Trainer.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/main.dir/Trainer.o -c /tmp/time_series/src/Trainer.cpp
 
 CMakeFiles/main.dir/Trainer.i: cmake_force
@@ -168,6 +181,7 @@ main_OBJECTS = \
 "CMakeFiles/main.dir/DataPreparatorPredict.o" \
 "CMakeFiles/main.dir/DataReader.o" \
 "CMakeFiles/main.dir/Evaluator.o" \
+"CMakeFiles/main.dir/ExperimentRunner.o" \
 "CMakeFiles/main.dir/Model.o" \
 "CMakeFiles/main.dir/Predict.o" \
 "CMakeFiles/main.dir/Trainer.o"
@@ -180,13 +194,14 @@ main: CMakeFiles/main.dir/DataPreparator.o
 main: CMakeFiles/main.dir/DataPreparatorPredict.o
 main: CMakeFiles/main.dir/DataReader.o
 main: CMakeFiles/main.dir/Evaluator.o
+main: CMakeFiles/main.dir/ExperimentRunner.o
 main: CMakeFiles/main.dir/Model.o
 main: CMakeFiles/main.dir/Predict.o
 main: CMakeFiles/main.dir/Trainer.o
 main: CMakeFiles/main.dir/build.make
 main: /usr/local/lib/libtensorflow_cc.so.2
 main: CMakeFiles/main.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/tmp/time_series/src/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Linking CXX executable main"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/tmp/time_series/src/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Linking CXX executable main"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/main.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

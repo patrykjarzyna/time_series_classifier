@@ -16,7 +16,7 @@ class DataReader
 
         std::vector<std::vector<float>> read_file(std::string filepath);
 
-    //private:
+    protected:
         char delimeter;
         int data_cols;
 

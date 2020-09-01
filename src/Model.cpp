@@ -64,22 +64,26 @@ void Model::assign_biases(int input_size, int layer1_size, int layer2_size, int 
     assign_b3 = Assign(scope, b3, RandomNormal(scope, {1, output_size}, DT_FLOAT));
 }
 
-void Model::fit(Tensor x_data, Tensor y_data)
+void Model::fit(Tensor x_data, Tensor y_data, int epochs)
 {
-    for (int i = 0; i < 5000; ++i) {
-    if (i % 100 == 0) {
-        TF_CHECK_OK(model_session->Run({{x, x_data}, {y, y_data}}, {loss}, &outputs));
-        std::cout << "Loss after " << i << " steps " << outputs[0].scalar<float>() << std::endl;
-    }
-    TF_CHECK_OK(model_session->Run({{x, x_data}, {y, y_data}}, {apply_w1, apply_w2, apply_w3, apply_b1, apply_b2, apply_b3}, nullptr));
+    for (int i = 0; i < epochs; i++)
+    {
+        if (i % int(epochs / 100) == 0)
+        {
+            TF_CHECK_OK(model_session->Run({{x, x_data}, {y, y_data}}, {loss}, &outputs));
+            std::cout << "Step: " << i << " Loss: " << outputs[0].scalar<float>() << std::endl;
+        }
+        TF_CHECK_OK(model_session->Run({{x, x_data}, {y, y_data}}, {apply_w1, apply_w2, apply_w3, apply_b1, apply_b2, apply_b3}, nullptr));
     }
 
 }
 
-void Model::predict(Tensor x_data)
+float Model::predict(Tensor x_data)
 {
-    TF_CHECK_OK(model_session->Run({{x, {x_data}}}, {layer_3}, &outputs));
-    std::cout << "DNN output: " << *outputs[0].scalar<float>().data() << std::endl;
-    //std::cout << "Price predicted " << data_set.output(*outputs[0].scalar<float>().data()) << " euros" << std::endl;
+    TF_CHECK_OK(model_session->Run({{x, x_data}}, {layer_3}, &outputs));
+    float y_pred = *outputs[0].scalar<float>().data();
+    std::cout << "Predicted value: " << y_pred << std::endl;
+
+    return y_pred;
 }
 
