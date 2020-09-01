@@ -11,7 +11,7 @@
 class DataPreparator: public DataReader
 {
     public:
-        void prepare_data(std::string filepath);
+        tensorflow::Tensor prepare_data(std::string filepath);
         DataPreparator(char delimeter_, int data_cols_);
 
 };

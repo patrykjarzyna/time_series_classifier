@@ -8,9 +8,11 @@ class Evaluator
         int y_true;
         int y_predicted;
         Evaluator();
+        void evaluate()
 
     private:
-        float evaluate();
+        float get_accuracy();
+        float get_fscore();
 };
 
 #endif // EVALUATOR_H

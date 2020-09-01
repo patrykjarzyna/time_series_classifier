@@ -1597,6 +1597,7 @@ CMakeFiles/main.dir/Trainer.o
 CMakeFiles/main.dir/main.o
  ../../include/DataPreparator.h
  ../../include/DataReader.h
+ ../../include/Model.h
  /tmp/time_series/src/main.cpp
  /usr/local/include/tensorflow/bazel-bin/tensorflow/include/Eigen/Core
  /usr/local/include/tensorflow/bazel-bin/tensorflow/include/Eigen/src/Core/ArithmeticSequence.h

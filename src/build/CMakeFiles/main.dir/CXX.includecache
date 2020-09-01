@@ -6,7 +6,7 @@
 
 #IncludeRegexTransform: 
 
-../../include/DataPreparator.h
+../../include/Model.h
 tensorflow/cc/client/client_session.h
 ../../include/tensorflow/cc/client/client_session.h
 tensorflow/cc/ops/standard_ops.h
@@ -15,28 +15,8 @@ tensorflow/core/framework/tensor.h
 ../../include/tensorflow/core/framework/tensor.h
 tensorflow/cc/framework/gradients.h
 ../../include/tensorflow/cc/framework/gradients.h
-DataReader.h
--
 
-../../include/DataReader.h
-string
--
-fstream
--
-vector
--
-utility
--
-stdexcept
--
-sstream
--
-iostream
--
-
-/tmp/time_series/src/DataPreparator.cpp
-DataPreparator.h
-/tmp/time_series/src/DataPreparator.h
+/tmp/time_series/src/Model.cpp
 tensorflow/cc/client/client_session.h
 /tmp/time_series/src/tensorflow/cc/client/client_session.h
 tensorflow/cc/ops/standard_ops.h
@@ -45,6 +25,8 @@ tensorflow/core/framework/tensor.h
 /tmp/time_series/src/tensorflow/core/framework/tensor.h
 tensorflow/cc/framework/gradients.h
 /tmp/time_series/src/tensorflow/cc/framework/gradients.h
+Model.h
+/tmp/time_series/src/Model.h
 
 /usr/local/include/tensorflow/bazel-bin/tensorflow/include/Eigen/Core
 src/Core/util/DisableStupidWarnings.h
