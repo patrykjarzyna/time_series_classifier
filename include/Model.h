@@ -10,13 +10,17 @@ using namespace tensorflow;
 class Model
 {
     public:
+        /// Trening i zapisywanie sesji modelu.
         void fit(Tensor x_data, Tensor y_data, int epochs);
+        /// Zwraca predykcje wytrenowanego modelu
         float predict(Tensor x_data);
 
         Model(int input_size, int layer1_size, int layer2_size, int output_size);
 
     private:
+        /// Dodaje wagi do warstw.
         void assign_weights(int input_size, int layer1_size, int layer2_size, int output_size);
+        /// Dodaje bias do warst.
         void assign_biases(int input_size, int layer1_size, int layer2_size, int output_size);
 
         Scope scope = Scope::NewRootScope();

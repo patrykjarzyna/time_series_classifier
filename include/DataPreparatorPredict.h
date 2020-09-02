@@ -5,10 +5,11 @@
 
 using namespace tensorflow;
 
-class DataPreparatorPredict //: public DataPreparator
+class DataPreparatorPredict : public DataPreparator
 {
     public:
-        DataPreparatorPredict();
+        DataPreparatorPredict(char delimeter_, int data_cols_);
+        /// Zwraca dane pomijając etykiety.
         Tensor prepare_data(std::string filepath);
 
     protected:

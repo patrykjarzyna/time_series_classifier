@@ -7,13 +7,18 @@ class ExperimentRunner
 {
     public:
         ExperimentRunner(int data_columns_, std::string train_data_path_, std::string test_data_path_, int epochs_);
+        /// Uruchamia wszystkie etapy eksperymentu.
         void runExperiment();
 
     private:
+        /// Zwraca wytrenowany model.
         Model trainModel();
+        /// Zwraca predykcje modelu.
         float getPredictions(Model model);
+        /// Zwraca etykiety.
         float getLabels();
-        void evaluate();
+        /// Wykonuje ewaluacje na podstawie zdefiniowanych metryk.
+        void evaluate(Model model);
 
         int data_columns;
         int epochs;
