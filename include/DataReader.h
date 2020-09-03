@@ -13,7 +13,7 @@ class DataReader
 {
     public:
         DataReader(char delimeter_, int data_cols_);
-        /// Pobiera wszystkie linie z pliku.
+        /// Pobiera wszystkie linie z pliku i zwraca wektor, którego elementami są wektory reprezentujące każdy wiersz pliku.
         std::vector<std::vector<float>> read_file(std::string filepath);
 
     protected:

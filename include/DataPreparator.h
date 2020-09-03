@@ -7,12 +7,13 @@
 
 #include <DataReader.h>
 
+using namespace tensorflow;
 
 class DataPreparator: public DataReader
 {
     public:
         /// Transformuje dane z pliku z wektorów na tensory.
-        tensorflow::Tensor prepare_data(std::string filepath);
+        virtual std::pair<Tensor, Tensor> prepare_data(std::string filepath);
         DataPreparator(char delimeter_, int data_cols_);
 
 };

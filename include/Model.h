@@ -13,7 +13,7 @@ class Model
         /// Trening i zapisywanie sesji modelu.
         void fit(Tensor x_data, Tensor y_data, int epochs);
         /// Zwraca predykcje wytrenowanego modelu
-        float predict(Tensor x_data);
+        Tensor predict(Tensor x_data);
 
         Model(int input_size, int layer1_size, int layer2_size, int output_size);
 

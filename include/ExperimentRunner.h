@@ -14,9 +14,9 @@ class ExperimentRunner
         /// Zwraca wytrenowany model.
         Model trainModel();
         /// Zwraca predykcje modelu.
-        float getPredictions(Model model);
+        Tensor getPredictions(Model model);
         /// Zwraca etykiety.
-        float getLabels();
+        Tensor getLabels();
         /// Wykonuje ewaluacje na podstawie zdefiniowanych metryk.
         void evaluate(Model model);
 
