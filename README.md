@@ -10,7 +10,7 @@ Program na umożliwiać nauczenie sieci modelu, oraz jego późniejszą symulacj
 # Jak uruchomić
 1. docker run -it floopcz/tensorflow_cc:ubuntu /bin/bash  
 2. git clone https://github.com/patrykjarzyna/time_series_classifier.git  
-3. cd time_series_classifier  
+3. cd time_series_classifier/src  
 4. mkdir build && cd build  
 5. cmake .. && make  
 6. ./main 
