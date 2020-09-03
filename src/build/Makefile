@@ -214,36 +214,6 @@ Model.s:
 .PHONY : Model.s
 
 # target to build an object file
-Predict.o:
-	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Predict.o
-.PHONY : Predict.o
-
-# target to preprocess a source file
-Predict.i:
-	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Predict.i
-.PHONY : Predict.i
-
-# target to generate assembly for a file
-Predict.s:
-	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Predict.s
-.PHONY : Predict.s
-
-# target to build an object file
-Trainer.o:
-	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Trainer.o
-.PHONY : Trainer.o
-
-# target to preprocess a source file
-Trainer.i:
-	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Trainer.i
-.PHONY : Trainer.i
-
-# target to generate assembly for a file
-Trainer.s:
-	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/Trainer.s
-.PHONY : Trainer.s
-
-# target to build an object file
 main.o:
 	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/main.o
 .PHONY : main.o
@@ -285,12 +255,6 @@ help:
 	@echo "... Model.o"
 	@echo "... Model.i"
 	@echo "... Model.s"
-	@echo "... Predict.o"
-	@echo "... Predict.i"
-	@echo "... Predict.s"
-	@echo "... Trainer.o"
-	@echo "... Trainer.i"
-	@echo "... Trainer.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"

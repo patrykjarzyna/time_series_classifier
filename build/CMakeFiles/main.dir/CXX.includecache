@@ -18,14 +18,6 @@ tensorflow/cc/framework/gradients.h
 DataReader.h
 -
 
-../include/DataPreparatorPredict.h
-DataPreparator.h
--
-
-../include/DataPreparatorPredicy.h
-DataPreparator.h
--
-
 ../include/DataReader.h
 string
 -
@@ -45,14 +37,14 @@ iostream
 /tmp/time_series/src/DataPreparator.cpp
 DataPreparator.h
 /tmp/time_series/src/DataPreparator.h
-
-/tmp/time_series/src/DataPreparatorPredict.cpp
-DataPreparatorPredict.h
-/tmp/time_series/src/DataPreparatorPredict.h
-
-/tmp/time_series/src/DataPreparatorPredicy.cpp
-DataPreparatorPredicy.h
-/tmp/time_series/src/DataPreparatorPredicy.h
+tensorflow/cc/client/client_session.h
+/tmp/time_series/src/tensorflow/cc/client/client_session.h
+tensorflow/cc/ops/standard_ops.h
+/tmp/time_series/src/tensorflow/cc/ops/standard_ops.h
+tensorflow/core/framework/tensor.h
+/tmp/time_series/src/tensorflow/core/framework/tensor.h
+tensorflow/cc/framework/gradients.h
+/tmp/time_series/src/tensorflow/cc/framework/gradients.h
 
 /usr/local/include/tensorflow/bazel-bin/tensorflow/include/Eigen/Core
 src/Core/util/DisableStupidWarnings.h

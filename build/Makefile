@@ -169,21 +169,6 @@ src/DataPreparatorPredict.s:
 .PHONY : src/DataPreparatorPredict.s
 
 # target to build an object file
-src/DataPreparatorPredicy.o:
-	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/DataPreparatorPredicy.o
-.PHONY : src/DataPreparatorPredicy.o
-
-# target to preprocess a source file
-src/DataPreparatorPredicy.i:
-	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/DataPreparatorPredicy.i
-.PHONY : src/DataPreparatorPredicy.i
-
-# target to generate assembly for a file
-src/DataPreparatorPredicy.s:
-	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/DataPreparatorPredicy.s
-.PHONY : src/DataPreparatorPredicy.s
-
-# target to build an object file
 src/DataReader.o:
 	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/DataReader.o
 .PHONY : src/DataReader.o
@@ -197,21 +182,6 @@ src/DataReader.i:
 src/DataReader.s:
 	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/DataReader.s
 .PHONY : src/DataReader.s
-
-# target to build an object file
-src/DataReaderPredict.o:
-	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/DataReaderPredict.o
-.PHONY : src/DataReaderPredict.o
-
-# target to preprocess a source file
-src/DataReaderPredict.i:
-	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/DataReaderPredict.i
-.PHONY : src/DataReaderPredict.i
-
-# target to generate assembly for a file
-src/DataReaderPredict.s:
-	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/DataReaderPredict.s
-.PHONY : src/DataReaderPredict.s
 
 # target to build an object file
 src/Evaluator.o:
@@ -229,6 +199,21 @@ src/Evaluator.s:
 .PHONY : src/Evaluator.s
 
 # target to build an object file
+src/ExperimentRunner.o:
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/ExperimentRunner.o
+.PHONY : src/ExperimentRunner.o
+
+# target to preprocess a source file
+src/ExperimentRunner.i:
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/ExperimentRunner.i
+.PHONY : src/ExperimentRunner.i
+
+# target to generate assembly for a file
+src/ExperimentRunner.s:
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/ExperimentRunner.s
+.PHONY : src/ExperimentRunner.s
+
+# target to build an object file
 src/Model.o:
 	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/Model.o
 .PHONY : src/Model.o
@@ -244,34 +229,19 @@ src/Model.s:
 .PHONY : src/Model.s
 
 # target to build an object file
-src/Predict.o:
-	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/Predict.o
-.PHONY : src/Predict.o
+src/main.o:
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/main.o
+.PHONY : src/main.o
 
 # target to preprocess a source file
-src/Predict.i:
-	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/Predict.i
-.PHONY : src/Predict.i
+src/main.i:
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/main.i
+.PHONY : src/main.i
 
 # target to generate assembly for a file
-src/Predict.s:
-	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/Predict.s
-.PHONY : src/Predict.s
-
-# target to build an object file
-src/Trainer.o:
-	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/Trainer.o
-.PHONY : src/Trainer.o
-
-# target to preprocess a source file
-src/Trainer.i:
-	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/Trainer.i
-.PHONY : src/Trainer.i
-
-# target to generate assembly for a file
-src/Trainer.s:
-	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/Trainer.s
-.PHONY : src/Trainer.s
+src/main.s:
+	$(MAKE) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/main.s
+.PHONY : src/main.s
 
 # Help Target
 help:
@@ -291,27 +261,21 @@ help:
 	@echo "... src/DataPreparatorPredict.o"
 	@echo "... src/DataPreparatorPredict.i"
 	@echo "... src/DataPreparatorPredict.s"
-	@echo "... src/DataPreparatorPredicy.o"
-	@echo "... src/DataPreparatorPredicy.i"
-	@echo "... src/DataPreparatorPredicy.s"
 	@echo "... src/DataReader.o"
 	@echo "... src/DataReader.i"
 	@echo "... src/DataReader.s"
-	@echo "... src/DataReaderPredict.o"
-	@echo "... src/DataReaderPredict.i"
-	@echo "... src/DataReaderPredict.s"
 	@echo "... src/Evaluator.o"
 	@echo "... src/Evaluator.i"
 	@echo "... src/Evaluator.s"
+	@echo "... src/ExperimentRunner.o"
+	@echo "... src/ExperimentRunner.i"
+	@echo "... src/ExperimentRunner.s"
 	@echo "... src/Model.o"
 	@echo "... src/Model.i"
 	@echo "... src/Model.s"
-	@echo "... src/Predict.o"
-	@echo "... src/Predict.i"
-	@echo "... src/Predict.s"
-	@echo "... src/Trainer.o"
-	@echo "... src/Trainer.i"
-	@echo "... src/Trainer.s"
+	@echo "... src/main.o"
+	@echo "... src/main.i"
+	@echo "... src/main.s"
 .PHONY : help
 
 

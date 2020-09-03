@@ -1063,7 +1063,9 @@ CMakeFiles/main.dir/Evaluator.o: ../../include/Evaluator.h
 CMakeFiles/main.dir/Evaluator.o: ../Evaluator.cpp
 
 CMakeFiles/main.dir/ExperimentRunner.o: ../../include/DataPreparator.h
+CMakeFiles/main.dir/ExperimentRunner.o: ../../include/DataPreparatorPredict.h
 CMakeFiles/main.dir/ExperimentRunner.o: ../../include/DataReader.h
+CMakeFiles/main.dir/ExperimentRunner.o: ../../include/Evaluator.h
 CMakeFiles/main.dir/ExperimentRunner.o: ../../include/ExperimentRunner.h
 CMakeFiles/main.dir/ExperimentRunner.o: ../../include/Model.h
 CMakeFiles/main.dir/ExperimentRunner.o: ../ExperimentRunner.cpp
@@ -2117,15 +2119,10 @@ CMakeFiles/main.dir/Model.o: /usr/local/include/tensorflow/bazel-bin/tensorflow/
 CMakeFiles/main.dir/Model.o: /usr/local/include/tensorflow/bazel-bin/tensorflow/include/unsupported/Eigen/src/SpecialFunctions/SpecialFunctionsPacketMath.h
 CMakeFiles/main.dir/Model.o: /usr/local/include/tensorflow/bazel-bin/tensorflow/include/unsupported/Eigen/src/SpecialFunctions/arch/GPU/GpuSpecialFunctions.h
 
-CMakeFiles/main.dir/Predict.o: ../../include/Predict.h
-CMakeFiles/main.dir/Predict.o: ../Predict.cpp
-
-CMakeFiles/main.dir/Trainer.o: ../../include/Trainer.h
-CMakeFiles/main.dir/Trainer.o: ../Trainer.cpp
-
 CMakeFiles/main.dir/main.o: ../../include/DataPreparator.h
 CMakeFiles/main.dir/main.o: ../../include/DataReader.h
 CMakeFiles/main.dir/main.o: ../../include/Evaluator.h
+CMakeFiles/main.dir/main.o: ../../include/ExperimentRunner.h
 CMakeFiles/main.dir/main.o: ../../include/Model.h
 CMakeFiles/main.dir/main.o: ../main.cpp
 CMakeFiles/main.dir/main.o: /usr/local/include/tensorflow/bazel-bin/tensorflow/include/Eigen/Core

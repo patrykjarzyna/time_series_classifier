@@ -78,11 +78,11 @@ void Model::fit(Tensor x_data, Tensor y_data, int epochs)
 
 }
 
-float Model::predict(Tensor x_data)
+Tensor Model::predict(Tensor x_data)
 {
     TF_CHECK_OK(model_session->Run({{x, x_data}}, {layer_3}, &outputs));
-    float y_pred = *outputs[0].scalar<float>().data();
-    std::cout << "Predicted value: " << y_pred << std::endl;
+    Tensor y_pred = outputs[0];
+    std::cout << "Predicted values: " << y_pred.DebugString() << std::endl;
 
     return y_pred;
 }

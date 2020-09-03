@@ -19,7 +19,7 @@ void Evaluator::evaluate()
     float accuracy = get_accuracy();
     float recall = get_recall();
 
-    std::cout << "Accuracy: " << accuracy << std::endl << "Recall: " << recall;
+    std::cout << "Accuracy: " << accuracy << std::endl << "Recall: " << recall << std::endl;
 }
 
 float Evaluator::get_accuracy()

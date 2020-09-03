@@ -1,6 +1,8 @@
 #include "ExperimentRunner.h"
 #include "Model.h"
+#include "Evaluator.h"
 #include "DataPreparator.h"
+#include "DataPreparatorPredict.h"
 
 ExperimentRunner::ExperimentRunner(int data_columns_, std::string train_data_path_, std::string test_data_path_, int epochs_)
 {
@@ -13,32 +15,57 @@ ExperimentRunner::ExperimentRunner(int data_columns_, std::string train_data_pat
 
 Model ExperimentRunner::trainModel()
 {
+    std::cout << "Trening modelu\n";
     Model model(data_columns, 20, 10, 1);
     DataPreparator dataPreparator(',', data_columns);
-    Tensor data_x = dataPreparator.prepare_data(train_data_path);
-    Tensor data_y = dataPreparator.prepare_data(train_data_path);
+    std::pair<Tensor, Tensor> data = dataPreparator.prepare_data(train_data_path);
+    Tensor data_x = data.first;
+    Tensor data_y = data.second;
     model.fit(data_x, data_y, epochs);
 
     return model;
 }
 
-float ExperimentRunner::getPredictions(Model model)
+Tensor ExperimentRunner::getPredictions(Model model)
 {
-    DataPreparator dataPreparator(',', data_columns);
-    Tensor data_x = dataPreparator.prepare_data(train_data_path);
-    float y_pred = model.predict(data_x);
+    std::cout << "Zbieranie predykcji\n";
+    DataPreparatorPredict dataPreparator(',', data_columns);
+    Tensor data_x = dataPreparator.prepare_data(test_data_path).first;
+    Tensor y_pred = model.predict(data_x);
 
     return y_pred;
 }
 
-float ExperimentRunner::getLabels()
+Tensor ExperimentRunner::getLabels()
 {
+    std::cout << "Zbieranie etykiet\n";
     DataPreparator dataPreparator(',', data_columns);
-    Tensor data_x = dataPreparator.prepare_data(test_data_path);
+    Tensor data_y = dataPreparator.prepare_data(test_data_path).second;
 
-    return 1.0;
+    return data_y;
 }
-void ExperimentRunner::evaluate()
+void ExperimentRunner::evaluate(Model model)
 {
 
+    Tensor y_pred = getPredictions(model);
+    Tensor y_true = getLabels();
+
+    std::vector<float> y_true_ = {};
+    std::vector<float> y_pred_ = {};
+
+    for(int i = 0; i < 3; i++)
+    {
+        y_true_.push_back(y_true.flat<float>().data()[i]);
+        y_pred_.push_back(y_pred.flat<float>().data()[i]);
+    }
+
+    Evaluator ev = Evaluator(y_true_, y_pred_);
+    ev.evaluate();
+}
+
+void ExperimentRunner::runExperiment()
+{
+    Model model = trainModel();
+    std::cout << "Ewaluacja modelu\n";
+    evaluate(model);
 }
