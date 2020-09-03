@@ -1,3 +1,0 @@
-/tmp/time_series/src/build/CMakeFiles/rebuild_cache.dir
-/tmp/time_series/src/build/CMakeFiles/edit_cache.dir
-/tmp/time_series/src/build/CMakeFiles/main.dir
