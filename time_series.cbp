@@ -37,19 +37,18 @@
 		<Unit filename="include/DataPreparator.h" />
 		<Unit filename="include/DataPreparatorPredict.h" />
 		<Unit filename="include/DataReader.h" />
+		<Unit filename="include/DataSet.h" />
 		<Unit filename="include/Evaluator.h" />
 		<Unit filename="include/ExperimentRunner.h" />
 		<Unit filename="include/Model.h" />
 		<Unit filename="src/DataPreparator.cpp" />
 		<Unit filename="src/DataPreparatorPredict.cpp" />
 		<Unit filename="src/DataReader.cpp" />
+		<Unit filename="src/DataSet.cpp" />
 		<Unit filename="src/Evaluator.cpp" />
 		<Unit filename="src/ExperimentRunner.cpp" />
 		<Unit filename="src/Model.cpp" />
 		<Unit filename="src/main.cpp" />
-		<Extensions>
-			<code_completion />
-			<debugger />
-		</Extensions>
+		<Extensions />
 	</Project>
 </CodeBlocks_project_file>

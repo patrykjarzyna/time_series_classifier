@@ -15,6 +15,10 @@ class DataPreparator: public DataReader
         /// Transformuje dane z pliku z wektorów na tensory.
         virtual std::pair<Tensor, Tensor> prepare_data(std::string filepath);
         DataPreparator(char delimeter_, int data_cols_);
+    private:
+        virtual void transform_data();
+        virtual void encode_labels();
+        int sample_size;
 
 };
 
