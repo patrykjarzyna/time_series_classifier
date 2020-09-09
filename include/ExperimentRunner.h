@@ -15,11 +15,11 @@ class ExperimentRunner
         DataSetTrain data_sets_train [2];
         DataSetsTrain data_sets_predict [2];
         /// Zwraca wytrenowany model.
-        Model trainModel();
+        Model trainModel(Model *model, DataSetTrain *data_set_train);
         /// Zwraca predykcje modelu.
-        Tensor getPredictions(Model model);
+        Tensor getPredictions(Model *model, DataSetTrain *data_set_predict);
         /// Wykonuje ewaluacje na podstawie zdefiniowanych metryk.
-        void evaluate(Model model);
+        void evaluate(Model *model);
 
         int data_columns;
         int epochs;
