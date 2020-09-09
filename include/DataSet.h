@@ -5,18 +5,16 @@
 class DataSet
 {
     public:
-        DataSet();
-        void get_labels_data();
-        void get_features_data();
-        void get_unique_labels();
+        DataSet(data_path, data_mode);
+        Tensor get_features_data();
+        int get_feature_num();
 
     private:
-        void load_data();
+        virtual void load_data(DataPreparator *data_prep)=0;
         Tensor labels;
         Tensor features;
         int labels_num;
-
-
+        std::string data_path;
 };
 
 #endif // DATASET_H
