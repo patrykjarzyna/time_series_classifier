@@ -10,6 +10,7 @@ ExperimentRunner::ExperimentRunner(int data_columns_, std::string train_data_pat
     train_data_path = train_data_path_;
     test_data_path = test_data_path_;
     epochs = epochs_;
+    models = []
 }
 
 

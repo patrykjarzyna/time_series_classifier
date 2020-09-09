@@ -11,12 +11,13 @@ class ExperimentRunner
         void runExperiment();
 
     private:
+        Model models [4];
+        DataSetTrain data_sets_train [2];
+        DataSetsTrain data_sets_predict [2];
         /// Zwraca wytrenowany model.
         Model trainModel();
         /// Zwraca predykcje modelu.
         Tensor getPredictions(Model model);
-        /// Zwraca etykiety.
-        Tensor getLabels();
         /// Wykonuje ewaluacje na podstawie zdefiniowanych metryk.
         void evaluate(Model model);
 
