@@ -3,13 +3,15 @@
 #include "tensorflow/cc/ops/standard_ops.h"
 #include "tensorflow/core/framework/tensor.h"
 #include "tensorflow/cc/framework/gradients.h"
+#include "DataPreparatorTrain.h"
 
 using namespace tensorflow;
 
-DataPreparatorTrain::DataPreparatorTrain(char delimeter_, int data_cols_):DataPreparator(delimeter_, data_cols_)
+DataPreparatorTrain::DataPreparatorTrain(char delimeter_, int data_cols_, int sample_size_):DataPreparator(delimeter_, data_cols_)
 {
     delimeter = delimeter_;
     data_cols = data_cols_;
+    sample_size = sample_size_;
 }
 
 std::pair<Tensor, Tensor> DataPreparatorTrain::prepare_data(std::string filepath)

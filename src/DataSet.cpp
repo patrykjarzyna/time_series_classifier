@@ -1,5 +1,8 @@
 #include "DataSet.h"
 
+using namespace tensorflow;
+
+
 Tensor DataSet::get_features_data()
 {
     return features;

@@ -16,10 +16,7 @@ class DataPreparator: public DataReader
         virtual std::pair<Tensor, Tensor> prepare_data(std::string filepath)=0;
         DataPreparator(char delimeter_, int data_cols_);
     private:
-        //virtual void transform_data();
-        //virtual void encode_labels();
-        int sample_size;
-
+        void normalize();
 };
 
 #endif // DATAPREPARATOR_H

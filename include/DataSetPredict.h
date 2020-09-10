@@ -7,7 +7,7 @@
 class DataSetPredict : public DataSet
 {
     public:
-        DataSetPredict(data_path, data_mode);
+        DataSetPredict(int data_columns, std::string data_path_);
 
     private:
         virtual void load_data(DataPreparator *data_prep);
