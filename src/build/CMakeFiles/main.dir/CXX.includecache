@@ -18,10 +18,6 @@ tensorflow/cc/framework/gradients.h
 DataReader.h
 -
 
-../../include/DataPreparatorPredict.h
-DataPreparator.h
--
-
 ../../include/DataReader.h
 string
 -
@@ -81,20 +77,6 @@ tensorflow/core/framework/tensor.h
 ../../include/tensorflow/core/framework/tensor.h
 tensorflow/cc/framework/gradients.h
 ../../include/tensorflow/cc/framework/gradients.h
-
-/tmp/time_series/src/ExperimentRunner.cpp
-ExperimentRunner.h
-/tmp/time_series/src/ExperimentRunner.h
-Model.h
-/tmp/time_series/src/Model.h
-Evaluator.h
-/tmp/time_series/src/Evaluator.h
-DataPreparator.h
-/tmp/time_series/src/DataPreparator.h
-DataPreparatorPredict.h
-/tmp/time_series/src/DataPreparatorPredict.h
-DataSet.h
-/tmp/time_series/src/DataSet.h
 
 /tmp/time_series/src/main.cpp
 string

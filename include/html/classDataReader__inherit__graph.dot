@@ -7,4 +7,6 @@ digraph "DataReader"
   Node1 [label="DataPreparator",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classDataPreparator.html"];
   Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
   Node2 [label="DataPreparatorPredict",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classDataPreparatorPredict.html"];
+  Node1 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="DataPreparatorTrain",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$classDataPreparatorTrain.html"];
 }

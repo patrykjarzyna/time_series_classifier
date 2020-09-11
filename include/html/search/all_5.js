@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['trainer',['Trainer',['../classTrainer.html',1,'']]]
+  ['model',['Model',['../classModel.html',1,'']]]
 ];

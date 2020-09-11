@@ -14,15 +14,15 @@ class ExperimentRunner
         void runExperiment();
 
     private:
-        Model models [3];
-        DataSetTrain data_sets_train [2];
-        DataSetPredict data_sets_predict [2];
+        std::vector<Model> models = {};
+        std::vector<DataSetTrain> data_sets_train = {};
+        std::vector<DataSetPredict> data_sets_predict = {};
         /// Zwraca wytrenowany model.
-        void trainModel();
+        void trainModels();
         /// Zwraca predykcje modelu.
-        Tensor getPredictions();
+        Tensor getPredictions(int model_num, int data_set_num);
         /// Wykonuje ewaluacje na podstawie zdefiniowanych metryk.
-        void evaluate();
+        void evaluate(Tensor * y_pred, Tensor * y_true);
 
         int data_columns;
         int epochs;

@@ -83,15 +83,11 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:af1e3150bedc51b7a28da49609aabb88a"><td class="memItemLeft" align="right" valign="top"><a id="af1e3150bedc51b7a28da49609aabb88a"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><b>DataPreparatorPredict</b> (char delimeter_, int data_cols_)</td></tr>
 <tr class="separator:af1e3150bedc51b7a28da49609aabb88a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a82700df1faf93d703638596bbeb4c734"><td class="memItemLeft" align="right" valign="top"><a id="a82700df1faf93d703638596bbeb4c734"></a>
-Tensor&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classDataPreparatorPredict.html#a82700df1faf93d703638596bbeb4c734">prepare_data</a> (std::string filepath)</td></tr>
-<tr class="memdesc:a82700df1faf93d703638596bbeb4c734"><td class="mdescLeft">&#160;</td><td class="mdescRight">Zwraca dane pomijając etykiety. <br /></td></tr>
-<tr class="separator:a82700df1faf93d703638596bbeb4c734"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5251908aa2bbd5eabbac364444264f70"><td class="memItemLeft" align="right" valign="top"><a id="a5251908aa2bbd5eabbac364444264f70"></a>
+virtual std::pair&lt; Tensor, Tensor &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classDataPreparatorPredict.html#a5251908aa2bbd5eabbac364444264f70">prepare_data</a> (std::string filepath)</td></tr>
+<tr class="memdesc:a5251908aa2bbd5eabbac364444264f70"><td class="mdescLeft">&#160;</td><td class="mdescRight">Zwraca dane pomijając etykiety. <br /></td></tr>
+<tr class="separator:a5251908aa2bbd5eabbac364444264f70"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_classDataPreparator"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classDataPreparator')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="classDataPreparator.html">DataPreparator</a></td></tr>
-<tr class="memitem:a6360dbc6b719687dcebc5569b5a605c1 inherit pub_methods_classDataPreparator"><td class="memItemLeft" align="right" valign="top"><a id="a6360dbc6b719687dcebc5569b5a605c1"></a>
-tensorflow::Tensor&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classDataPreparator.html#a6360dbc6b719687dcebc5569b5a605c1">prepare_data</a> (std::string filepath)</td></tr>
-<tr class="memdesc:a6360dbc6b719687dcebc5569b5a605c1 inherit pub_methods_classDataPreparator"><td class="mdescLeft">&#160;</td><td class="mdescRight">Transformuje dane z pliku z wektorów na tensory. <br /></td></tr>
-<tr class="separator:a6360dbc6b719687dcebc5569b5a605c1 inherit pub_methods_classDataPreparator"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7527efe466ee1cb148d5ff3b72589fa3 inherit pub_methods_classDataPreparator"><td class="memItemLeft" align="right" valign="top"><a id="a7527efe466ee1cb148d5ff3b72589fa3"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><b>DataPreparator</b> (char delimeter_, int data_cols_)</td></tr>
 <tr class="separator:a7527efe466ee1cb148d5ff3b72589fa3 inherit pub_methods_classDataPreparator"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -100,14 +96,19 @@ tensorflow::Tensor&#160;</td><td class="memItemRight" valign="bottom"><a class="
 &#160;</td><td class="memItemRight" valign="bottom"><b>DataReader</b> (char delimeter_, int data_cols_)</td></tr>
 <tr class="separator:a64029958665c3e72624d2c90439d297b inherit pub_methods_classDataReader"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa319d0b428916f90ab04264db7228085 inherit pub_methods_classDataReader"><td class="memItemLeft" align="right" valign="top"><a id="aa319d0b428916f90ab04264db7228085"></a>
-std::vector&lt; std::vector&lt; float &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>read_file</b> (std::string filepath)</td></tr>
+std::vector&lt; std::vector&lt; float &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classDataReader.html#aa319d0b428916f90ab04264db7228085">read_file</a> (std::string filepath)</td></tr>
+<tr class="memdesc:aa319d0b428916f90ab04264db7228085 inherit pub_methods_classDataReader"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pobiera wszystkie linie z pliku i zwraca wektor, którego elementami są wektory reprezentujące każdy wiersz pliku. <br /></td></tr>
 <tr class="separator:aa319d0b428916f90ab04264db7228085 inherit pub_methods_classDataReader"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae7069e89867633c00f585334846c6002 inherit pub_methods_classDataReader"><td class="memItemLeft" align="right" valign="top"><a id="ae7069e89867633c00f585334846c6002"></a>
+std::vector&lt; std::vector&lt; float &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>read_read_sample</b> (std::string filepath)</td></tr>
+<tr class="separator:ae7069e89867633c00f585334846c6002 inherit pub_methods_classDataReader"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="inherited"></a>
 Additional Inherited Members</h2></td></tr>
 <tr class="inherit_header pro_methods_classDataReader"><td colspan="2" onclick="javascript:toggleInherit('pro_methods_classDataReader')"><img src="closed.png" alt="-"/>&#160;Protected Member Functions inherited from <a class="el" href="classDataReader.html">DataReader</a></td></tr>
 <tr class="memitem:a0e9af765fe3e2ed0f721b626fcf4d1d7 inherit pro_methods_classDataReader"><td class="memItemLeft" align="right" valign="top"><a id="a0e9af765fe3e2ed0f721b626fcf4d1d7"></a>
-std::ifstream&#160;</td><td class="memItemRight" valign="bottom"><b>get_file</b> (std::string filepath)</td></tr>
+std::ifstream&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classDataReader.html#a0e9af765fe3e2ed0f721b626fcf4d1d7">get_file</a> (std::string filepath)</td></tr>
+<tr class="memdesc:a0e9af765fe3e2ed0f721b626fcf4d1d7 inherit pro_methods_classDataReader"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sprawdza czy istnieje i otwiera plik. <br /></td></tr>
 <tr class="separator:a0e9af765fe3e2ed0f721b626fcf4d1d7 inherit pro_methods_classDataReader"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pro_attribs_classDataReader"><td colspan="2" onclick="javascript:toggleInherit('pro_attribs_classDataReader')"><img src="closed.png" alt="-"/>&#160;Protected Attributes inherited from <a class="el" href="classDataReader.html">DataReader</a></td></tr>
 <tr class="memitem:a1d06e1b647a16667a9f9e4f88b06316c inherit pro_attribs_classDataReader"><td class="memItemLeft" align="right" valign="top"><a id="a1d06e1b647a16667a9f9e4f88b06316c"></a>
@@ -116,6 +117,9 @@ char&#160;</td><td class="memItemRight" valign="bottom"><b>delimeter</b></td></t
 <tr class="memitem:abf88eedea2e0ef00584db595e1ced71a inherit pro_attribs_classDataReader"><td class="memItemLeft" align="right" valign="top"><a id="abf88eedea2e0ef00584db595e1ced71a"></a>
 int&#160;</td><td class="memItemRight" valign="bottom"><b>data_cols</b></td></tr>
 <tr class="separator:abf88eedea2e0ef00584db595e1ced71a inherit pro_attribs_classDataReader"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a241518d6e543c452ac421659fa34e6cf inherit pro_attribs_classDataReader"><td class="memItemLeft" align="right" valign="top"><a id="a241518d6e543c452ac421659fa34e6cf"></a>
+std::string&#160;</td><td class="memItemRight" valign="bottom"><b>file_type</b></td></tr>
+<tr class="separator:a241518d6e543c452ac421659fa34e6cf inherit pro_attribs_classDataReader"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <hr/>The documentation for this class was generated from the following file:<ul>
 <li><a class="el" href="DataPreparatorPredict_8h_source.html">DataPreparatorPredict.h</a></li>

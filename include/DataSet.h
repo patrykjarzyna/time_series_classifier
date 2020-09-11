@@ -11,10 +11,13 @@ using namespace tensorflow;
 class DataSet
 {
     public:
+        /// Zwraca dane treningowe.
         Tensor get_features_data();
+        /// Zwraca liczbe kolumn z danymi.
         int get_feature_num();
 
     protected:
+        /// Przygotowuje i dodaje dane treningowe i etykiety.
         virtual void load_data(DataPreparator *data_prep)=0;
         Tensor labels;
         Tensor features;

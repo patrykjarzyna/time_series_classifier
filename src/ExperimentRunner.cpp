@@ -11,55 +11,39 @@ ExperimentRunner::ExperimentRunner(int data_columns_, std::string train_data_pat
     train_data_path = train_data_path_;
     test_data_path = test_data_path_;
     epochs = epochs_;
-    models = [Model model1(data_columns, 15, 10, 1), Model model2(data_columns, 20, 10, 1), Model model3(data_columns, 25, 10, 1), Model model4(data_columns, 30, 10, 1)]
-    data_sets_train = [];
-    data_sets_predict = [];
+    models = {Model(data_columns_, 15, 10, 1), Model(data_columns_, 20, 10, 1), Model(data_columns_, 25, 10, 1)};
+    data_sets_train = {DataSetTrain(data_columns_, train_data_path_, 2), DataSetTrain(data_columns_, train_data_path_, 2)};
+    data_sets_predict = {DataSetPredict(data_columns_, test_data_path_), DataSetPredict(data_columns_, test_data_path_)};
 }
 
 
-ExperimentRunner::trainModel()
+void ExperimentRunner::trainModels()
 {
     std::cout << "Trening modeli\n";
 
-    DataPreparator dataPreparator(',', data_columns);
-    std::pair<Tensor, Tensor> data = dataPreparator.prepare_data(train_data_path);
-    Tensor data_x = data.first;
-    Tensor data_y = data.second;
-        for(int i = 0; i < 3; i++)
-        models[i].fit(data_x, data_y, epochs);
+    for(int i = 0; i < 3; i++)
+        for(int j = 0; j < 2; j++)
+            models[i].fit(data_sets_train[j].get_features_data(), data_sets_train[j].get_labels_data(), epochs);
 }
 
-Tensor ExperimentRunner::getPredictions()
+Tensor ExperimentRunner::getPredictions(int model_num, int data_set_num)
 {
     std::cout << "Zbieranie predykcji\n";
-    DataPreparatorPredict dataPreparator(',', data_columns);
-    Tensor data_x = dataPreparator.prepare_data(test_data_path).first;
-    Tensor y_pred = model.predict(data_x);
+    Tensor y_pred = models[model_num].predict(data_sets_train[data_set_num].get_features_data());
 
     return y_pred;
 }
 
-Tensor ExperimentRunner::getLabels()
+void ExperimentRunner::evaluate(Tensor * y_pred, Tensor * y_true)
 {
-    std::cout << "Zbieranie etykiet\n";
-    DataPreparator dataPreparator(',', data_columns);
-    Tensor data_y = dataPreparator.prepare_data(test_data_path).second;
-
-    return data_y;
-}
-void ExperimentRunner::evaluate()
-{
-
-    Tensor y_pred = getPredictions();
-    Tensor y_true = getLabels();
 
     std::vector<float> y_true_ = {};
     std::vector<float> y_pred_ = {};
 
     for(int i = 0; i < 3; i++)
     {
-        y_true_.push_back(y_true.flat<float>().data()[i]);
-        y_pred_.push_back(y_pred.flat<float>().data()[i]);
+        y_true_.push_back(y_true->flat<float>().data()[i]);
+        y_pred_.push_back(y_pred->flat<float>().data()[i]);
     }
 
     Evaluator ev = Evaluator(y_true_, y_pred_);
@@ -68,7 +52,13 @@ void ExperimentRunner::evaluate()
 
 void ExperimentRunner::runExperiment()
 {
-    Model model = trainModel();
-    std::cout << "Ewaluacja modelu\n";
-    evaluate(model);
+    trainModels();
+    std::cout << "Ewaluacja modeli\n";
+    for(int i = 0; i < 3; i++)
+        for(int j = 0; j < 2; j++)
+            {
+            tensorflow::Tensor y_true = data_sets_train[j].get_labels_data();
+            tensorflow::Tensor y_pred = getPredictions(i, j);
+            evaluate(&y_pred, &y_true);
+            }
 }

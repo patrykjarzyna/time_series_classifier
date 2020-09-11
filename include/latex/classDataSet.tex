@@ -1,0 +1,44 @@
+\hypertarget{classDataSet}{}\section{Data\+Set Class Reference}
+\label{classDataSet}\index{Data\+Set@{Data\+Set}}
+
+
+Inheritance diagram for Data\+Set\+:
+% FIG 0
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classDataSet_a3b8181e6a14733ab9461cd095c062b8d}\label{classDataSet_a3b8181e6a14733ab9461cd095c062b8d}} 
+Tensor \hyperlink{classDataSet_a3b8181e6a14733ab9461cd095c062b8d}{get\+\_\+features\+\_\+data} ()
+\begin{DoxyCompactList}\small\item\em Zwraca dane treningowe. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classDataSet_ae5287fb75b5cd912354606e8eb1dfb90}\label{classDataSet_ae5287fb75b5cd912354606e8eb1dfb90}} 
+int \hyperlink{classDataSet_ae5287fb75b5cd912354606e8eb1dfb90}{get\+\_\+feature\+\_\+num} ()
+\begin{DoxyCompactList}\small\item\em Zwraca liczbe kolumn z danymi. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classDataSet_ac8f6a1c661e9345ab24f6074fa77d8d3}\label{classDataSet_ac8f6a1c661e9345ab24f6074fa77d8d3}} 
+virtual void \hyperlink{classDataSet_ac8f6a1c661e9345ab24f6074fa77d8d3}{load\+\_\+data} (\hyperlink{classDataPreparator}{Data\+Preparator} $\ast$data\+\_\+prep)=0
+\begin{DoxyCompactList}\small\item\em Przygotowuje i dodaje dane treningowe i etykiety. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classDataSet_a3f5c00bae7ba79b68089db27d2ae7dba}\label{classDataSet_a3f5c00bae7ba79b68089db27d2ae7dba}} 
+Tensor {\bfseries labels}
+\item 
+\mbox{\Hypertarget{classDataSet_ae209670ecd93ea736dd2dcac8b291324}\label{classDataSet_ae209670ecd93ea736dd2dcac8b291324}} 
+Tensor {\bfseries features}
+\item 
+\mbox{\Hypertarget{classDataSet_aab8c864d1f80a1d5700042e13b1446ce}\label{classDataSet_aab8c864d1f80a1d5700042e13b1446ce}} 
+int {\bfseries data\+\_\+cols}
+\item 
+\mbox{\Hypertarget{classDataSet_ad55a8607588c2d2da5be092eb0e6f5c7}\label{classDataSet_ad55a8607588c2d2da5be092eb0e6f5c7}} 
+int {\bfseries labels\+\_\+num}
+\item 
+\mbox{\Hypertarget{classDataSet_aa6fa891da9f20f7d79828922873a44a8}\label{classDataSet_aa6fa891da9f20f7d79828922873a44a8}} 
+std\+::string {\bfseries data\+\_\+path}
+\end{DoxyCompactItemize}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Data\+Set.\+h\end{DoxyCompactItemize}

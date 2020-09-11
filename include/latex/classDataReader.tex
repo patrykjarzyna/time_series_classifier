@@ -11,14 +11,17 @@ Inheritance diagram for Data\+Reader\+:
 {\bfseries Data\+Reader} (char delimeter\+\_\+, int data\+\_\+cols\+\_\+)
 \item 
 \mbox{\Hypertarget{classDataReader_aa319d0b428916f90ab04264db7228085}\label{classDataReader_aa319d0b428916f90ab04264db7228085}} 
-std\+::vector$<$ std\+::vector$<$ float $>$ $>$ {\bfseries read\+\_\+file} (std\+::string filepath)
+std\+::vector$<$ std\+::vector$<$ float $>$ $>$ \hyperlink{classDataReader_aa319d0b428916f90ab04264db7228085}{read\+\_\+file} (std\+::string filepath)
+\begin{DoxyCompactList}\small\item\em Pobiera wszystkie linie z pliku i zwraca wektor, którego elementami są wektory reprezentujące każdy wiersz pliku. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classDataReader_ae7069e89867633c00f585334846c6002}\label{classDataReader_ae7069e89867633c00f585334846c6002}} 
+std\+::vector$<$ std\+::vector$<$ float $>$ $>$ {\bfseries read\+\_\+read\+\_\+sample} (std\+::string filepath)
 \end{DoxyCompactItemize}
 \subsection*{Protected Member Functions}
 \begin{DoxyCompactItemize}
 \item 
 \mbox{\Hypertarget{classDataReader_a0e9af765fe3e2ed0f721b626fcf4d1d7}\label{classDataReader_a0e9af765fe3e2ed0f721b626fcf4d1d7}} 
-std\+::ifstream {\bfseries get\+\_\+file} (std\+::string filepath)
-\end{DoxyCompactItemize}
+std\+::ifstream \hyperlink{classDataReader_a0e9af765fe3e2ed0f721b626fcf4d1d7}{get\+\_\+file} (std\+::string filepath)
+\begin{DoxyCompactList}\small\item\em Sprawdza czy istnieje i otwiera plik. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Protected Attributes}
 \begin{DoxyCompactItemize}
 \item 
@@ -27,6 +30,9 @@ char {\bfseries delimeter}
 \item 
 \mbox{\Hypertarget{classDataReader_abf88eedea2e0ef00584db595e1ced71a}\label{classDataReader_abf88eedea2e0ef00584db595e1ced71a}} 
 int {\bfseries data\+\_\+cols}
+\item 
+\mbox{\Hypertarget{classDataReader_a241518d6e543c452ac421659fa34e6cf}\label{classDataReader_a241518d6e543c452ac421659fa34e6cf}} 
+std\+::string {\bfseries file\+\_\+type}
 \end{DoxyCompactItemize}
 
 

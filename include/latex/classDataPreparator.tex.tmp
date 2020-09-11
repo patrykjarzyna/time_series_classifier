@@ -11,8 +11,8 @@ Collaboration diagram for Data\+Preparator\+:
 \subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{classDataPreparator_a6360dbc6b719687dcebc5569b5a605c1}\label{classDataPreparator_a6360dbc6b719687dcebc5569b5a605c1}} 
-tensorflow\+::\+Tensor \hyperlink{classDataPreparator_a6360dbc6b719687dcebc5569b5a605c1}{prepare\+\_\+data} (std\+::string filepath)
+\mbox{\Hypertarget{classDataPreparator_ae94d401f88bd3af4d76f756fd50a976c}\label{classDataPreparator_ae94d401f88bd3af4d76f756fd50a976c}} 
+virtual std\+::pair$<$ Tensor, Tensor $>$ \hyperlink{classDataPreparator_ae94d401f88bd3af4d76f756fd50a976c}{prepare\+\_\+data} (std\+::string filepath)=0
 \begin{DoxyCompactList}\small\item\em Transformuje dane z pliku z wektorów na tensory. \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{classDataPreparator_a7527efe466ee1cb148d5ff3b72589fa3}\label{classDataPreparator_a7527efe466ee1cb148d5ff3b72589fa3}} 
 {\bfseries Data\+Preparator} (char delimeter\+\_\+, int data\+\_\+cols\+\_\+)
